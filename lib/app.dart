@@ -1,14 +1,20 @@
-import 'package:car_marketplace_app/splash_screen.dart';
+import 'package:car_marketplace_app/config/routes/app_pages.dart';
+import 'package:car_marketplace_app/config/routes/app_routes.dart';
+import 'package:car_marketplace_app/config/theme/theme_style.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      theme: AppTheme.lightTheme,
+      initialRoute: RouteView.splash.name,
+      getPages: AppRouting.route,
+      // home: const Car3DDemoWidget(),
     );
   }
 }
