@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      initialRoute: RouteView.splash.name,
+      initialRoute: RouteView.userfillprofile.name,
       getPages: AppRouting.route,
-      // home: const Car3DDemoWidget(),
+      // home: const OtpScreenWidget(),
     );
   }
 }

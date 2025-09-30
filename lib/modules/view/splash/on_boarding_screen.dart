@@ -1,8 +1,9 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:animate_do/animate_do.dart';
+import 'package:car_marketplace_app/config/routes/app_routes.dart';
 import 'package:car_marketplace_app/config/theme/theme_style.dart';
-import 'package:car_marketplace_app/modules/assets.dart';
+import 'package:car_marketplace_app/core/data/assets.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_3d_controller/flutter_3d_controller.dart';
@@ -80,13 +81,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   );
                 }),
           ),
-          const SizedBox(height: 30),
+          const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.only(left: 25, right: 23, bottom: 36),
             child: PrimaryButton(
               elevation: 0,
               onTap: () {
                 if (_currentIndex == onBoardinglist.length - 1) {
+                  // Navigate to next screen (replace with your screen)
+                  RouteView.signin.go();
                 } else {
                   _pageController1.nextPage(
                     duration: const Duration(milliseconds: 500),
@@ -107,7 +110,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               width: 327,
               textColor: AppColors.white,
             ),
-          ),
+          )
         ],
       ),
     );
@@ -180,29 +183,31 @@ class _PrimaryButtonState extends State<PrimaryButton>
             reverseCurve: Curves.easeIn,
           ),
         ),
-        child: Card(
-          elevation: widget.elevation ?? 5,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(widget.borderRadius!),
-          ),
-          child: Container(
-            height: widget.height ?? 55,
-            alignment: Alignment.center,
-            width: widget.width ?? double.maxFinite,
-            decoration: BoxDecoration(
-              color: widget.bgColor,
+        child: Center(
+          child: Card(
+            elevation: widget.elevation ?? 5,
+            shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(widget.borderRadius!),
             ),
-            child: Text(
-              widget.text,
-              style: GoogleFonts.plusJakartaSans(
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-                color: AppColors.background,
-              ).copyWith(
-                  color: widget.textColor,
+            child: Container(
+              height: widget.height ?? 55,
+              alignment: Alignment.center,
+              width: widget.width ?? double.maxFinite,
+              decoration: BoxDecoration(
+                color: widget.bgColor,
+                borderRadius: BorderRadius.circular(widget.borderRadius!),
+              ),
+              child: Text(
+                widget.text,
+                style: GoogleFonts.plusJakartaSans(
+                  fontSize: 14,
                   fontWeight: FontWeight.w500,
-                  fontSize: widget.fontSize),
+                  color: AppColors.background,
+                ).copyWith(
+                    color: widget.textColor,
+                    fontWeight: FontWeight.w500,
+                    fontSize: widget.fontSize),
+              ),
             ),
           ),
         ),
