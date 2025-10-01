@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      initialRoute: RouteView.userfillprofile.name,
+      initialRoute: RouteView.splash.name,
       getPages: AppRouting.route,
       // home: const OtpScreenWidget(),
     );

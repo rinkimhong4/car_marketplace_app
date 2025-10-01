@@ -4,7 +4,17 @@ import 'package:get/get.dart';
 //   static const home = '/home';
 // }
 
-enum RouteView { home, splash, onboarding, signin, signup, userfillprofile }
+enum RouteView {
+  home,
+  splash,
+  onboarding,
+  signin,
+  signup,
+  userfillprofile,
+  otp,
+  forgotpassword,
+  createnewpassword
+}
 
 extension AppPages on RouteView {
   // Use: RouteView.home.go()

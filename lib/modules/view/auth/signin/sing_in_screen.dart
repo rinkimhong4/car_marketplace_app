@@ -64,7 +64,9 @@ class SingInScreen extends StatelessWidget {
           PrimaryButtonApp(
             text: "Sign In",
             backgroundColor: Colors.black,
-            onPressed: () {},
+            onPressed: () {
+              RouteView.userfillprofile.go();
+            },
           ),
           const SizedBox(height: 16),
 

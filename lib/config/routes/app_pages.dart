@@ -1,10 +1,12 @@
 import 'package:car_marketplace_app/config/routes/app_routes.dart';
 import 'package:car_marketplace_app/modules/view/auth/signin/sing_in_screen.dart';
 import 'package:car_marketplace_app/modules/view/auth/signup/sign_up_screen.dart';
+import 'package:car_marketplace_app/modules/view/forgotpassword/forgot_password_screen.dart';
 import 'package:car_marketplace_app/modules/view/home_screen.dart';
 import 'package:car_marketplace_app/modules/view/splash/on_boarding_screen.dart';
 import 'package:car_marketplace_app/modules/view/splash/splash_screen.dart';
 import 'package:car_marketplace_app/modules/view/user_fill_profile_screen.dart';
+import 'package:car_marketplace_app/widget/otp_screen_widget.dart';
 import 'package:get/get.dart';
 
 class AppRouting {
@@ -44,6 +46,24 @@ class AppRouting {
         return GetPage(
           name: "/${e.name}",
           page: () => const UserFillProfileScreen(),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.otp:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => const OtpScreenWidget(),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.forgotpassword:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => const ForgotPasswordScreen(),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.createnewpassword:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => const CreateNewPassword(),
           // binding: NotificationBinding(),
         );
     }

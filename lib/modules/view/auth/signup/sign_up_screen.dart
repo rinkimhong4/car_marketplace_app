@@ -84,7 +84,18 @@ class _SignUpScreenState extends State<SignUpScreen> {
           PrimaryButtonApp(
             text: "Sign Up",
             backgroundColor: Colors.black,
-            onPressed: () {},
+            onPressed: () {
+              RouteView.userfillprofile.go();
+            },
+          ),
+          const SizedBox(height: 14),
+          // forgot password
+          GestureDetector(
+            onTap: () => RouteView.forgotpassword.go(),
+            child: Text(
+              'forgot Password',
+              style: AppTextStyle.bold12(color: Colors.black),
+            ),
           ),
           const SizedBox(height: 30),
           const RowRuler(),

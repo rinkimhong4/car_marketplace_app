@@ -104,9 +104,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               text: _currentIndex == onBoardinglist.length - 1
                   ? 'Get Started'
                   : 'Next',
-              bgColor: AppTheme.secondarySwatch,
+              bgColor: Colors.black,
               borderRadius: 20,
-              height: 46,
+              height: 52,
               width: 327,
               textColor: AppColors.white,
             ),

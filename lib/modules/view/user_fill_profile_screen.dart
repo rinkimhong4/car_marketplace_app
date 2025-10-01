@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:car_marketplace_app/config/routes/app_routes.dart';
 import 'package:car_marketplace_app/config/theme/theme_style.dart';
 import 'package:car_marketplace_app/widget/app_bar_widget.dart';
 import 'package:car_marketplace_app/widget/auth_text_field.dart';
@@ -119,7 +120,9 @@ class _UserFillProfileScreenState extends State<UserFillProfileScreen> {
           PrimaryButtonApp(
             backgroundColor: Colors.black,
             text: 'Continue',
-            onPressed: () {},
+            onPressed: () {
+              RouteView.otp.go();
+            },
           )
         ],
       ),
