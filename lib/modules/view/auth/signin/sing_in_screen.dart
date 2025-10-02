@@ -25,8 +25,8 @@ class SingInScreen extends StatelessWidget {
   /// --- AppBar Block ---
   Widget _buildAppBar() {
     return const AppBarBack(
-      backgroundColor: AppColors.white,
-    );
+        // backgroundColor: AppColors.white,
+        );
   }
 
   /// --- Body Content Block ---

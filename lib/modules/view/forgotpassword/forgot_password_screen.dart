@@ -40,7 +40,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   Widget _buildAppBar() {
     return const AppBarBack(
       title: "Forgot Password",
-      backgroundColor: AppColors.white,
+      // backgroundColor: AppColors.white,
     );
   }
 
@@ -391,7 +391,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
   Widget _buildAppBar() {
     return const AppBarBack(
       title: "Forgot Password",
-      backgroundColor: AppColors.white,
+      // backgroundColor: AppColors.white,
     );
   }
 

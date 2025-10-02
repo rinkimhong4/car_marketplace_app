@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      initialRoute: RouteView.splash.name,
+      // initialRoute: RouteView.splash.name,
+      initialRoute: RouteView.home.name,
       getPages: AppRouting.route,
       // home: const OtpScreenWidget(),
     );

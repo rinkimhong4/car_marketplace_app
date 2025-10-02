@@ -36,7 +36,7 @@ class _UserFillProfileScreenState extends State<UserFillProfileScreen> {
   Widget _buildAppBar() {
     return const AppBarBack(
       title: 'Fill Your Profile',
-      backgroundColor: AppColors.white,
+      // backgroundColor: AppColors.white,
     );
   }
 

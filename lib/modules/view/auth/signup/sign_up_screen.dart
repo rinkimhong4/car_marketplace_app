@@ -38,8 +38,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   /// --- AppBar Block ---
   Widget _buildAppBar() {
     return const AppBarBack(
-      backgroundColor: AppColors.white,
-    );
+        // backgroundColor: AppColors.white,
+        );
   }
 
   /// --- Body Content Block ---
