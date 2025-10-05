@@ -13,7 +13,8 @@ enum RouteView {
   userfillprofile,
   otp,
   forgotpassword,
-  createnewpassword
+  createnewpassword,
+  carDetail
 }
 
 extension AppPages on RouteView {

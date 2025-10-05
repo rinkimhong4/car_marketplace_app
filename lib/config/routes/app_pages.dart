@@ -1,11 +1,13 @@
 import 'package:car_marketplace_app/config/routes/app_routes.dart';
+import 'package:car_marketplace_app/core/models/product_detail_model.dart';
 import 'package:car_marketplace_app/modules/view/auth/signin/sing_in_screen.dart';
 import 'package:car_marketplace_app/modules/view/auth/signup/sign_up_screen.dart';
+import 'package:car_marketplace_app/modules/view/car_detail_screen.dart';
 import 'package:car_marketplace_app/modules/view/forgotpassword/forgot_password_screen.dart';
-import 'package:car_marketplace_app/modules/view/home_screen.dart';
+import 'package:car_marketplace_app/widget/main_navigation_screen.dart';
 import 'package:car_marketplace_app/modules/view/splash/on_boarding_screen.dart';
 import 'package:car_marketplace_app/modules/view/splash/splash_screen.dart';
-import 'package:car_marketplace_app/modules/view/user_fill_profile_screen.dart';
+import 'package:car_marketplace_app/widget/user_fill_profile_screen.dart';
 import 'package:car_marketplace_app/widget/otp_screen_widget.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +17,7 @@ class AppRouting {
       case RouteView.home:
         return GetPage(
           name: "/",
-          page: () => const HomeScreen(),
+          page: () => const MainNavigationScreen(),
           transition: Transition.noTransition,
         );
       case RouteView.splash:
@@ -64,6 +66,12 @@ class AppRouting {
         return GetPage(
           name: "/${e.name}",
           page: () => const CreateNewPassword(),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.carDetail:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => CarDetailScreen(product: Get.arguments as ProductDetail),
           // binding: NotificationBinding(),
         );
     }

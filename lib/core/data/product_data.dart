@@ -1,0 +1,211 @@
+import 'package:flutter/material.dart';
+import 'package:car_marketplace_app/core/models/product_detail_model.dart';
+
+/// A list of sample car products for demonstration purposes.
+/// In a real application, this data would be fetched from an API or database.
+final List<ProductDetail> products = [
+  const ProductDetail(
+    title: 'Toyota Camry',
+    description:
+        'Reliable midsize sedan with excellent fuel economy and advanced safety features.',
+    price: 25000,
+    rating: 4.5,
+    reviewCount: 120,
+    galleryImages: [
+      'https://global.toyota/pages/news/images/2017/07/10/1330/20170710_01_ogp.jpg',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3UCFDNbo5OKCs5ysNDNbNxFY9iRIXdF5s_BX9IvTEPSC9iPCh0DpoccJsQEn5kKpOWY&usqp=CAU',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu42pBVdp9P0ctmqIDqVGK3QzGVkXqAe8r5PTwCe-YpR49XatOLhCFU-ztAeLcgq37Pf4&usqp=CAU',
+      'https://toyotapromo.ro/cdn/shop/files/2_348.jpg?v=17217c37590',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp22NxWZPlB5hyv2Laz1eqGzWuFVSoTq1TMA&s'
+    ],
+    availableColors: [Color(0xFF0000FF), Color(0xFFFF0000), Color(0xFF00FF00)],
+    model3dUrl: 'assets/3d/tesla_2018_model_3.glb',
+    storeName: 'Toyota Store',
+    storeLogo:
+        'https://images.unsplash.com/photo-1682020245788-d52bc25c378c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEhvbmRhJTIwQ2l2aWMlMjBUeXBlJTIwUnxlbnwwfHwwfHx8MA%3D%3D',
+    storeDescription: 'Official Toyota Dealer',
+    brand: 'Toyota',
+    condition: 'New',
+  ),
+  const ProductDetail(
+    title: 'Honda Civic',
+    description:
+        'Compact car known for its sporty handling and spacious interior.',
+    price: 18000,
+    rating: 4.2,
+    reviewCount: 95,
+    galleryImages: [
+      "https://cdn.pixabay.com/photo/2024/01/13/19/43/ai-generated-8506505_1280.jpg",
+      'https://cdn.pixabay.com/photo/2023/01/07/14/59/ai-generated-7703434_1280.jpg',
+      'https://cdn.pixabay.com/photo/2023/01/07/15/02/ai-generated-7703436_1280.jpg',
+      'https://cdn.pixabay.com/photo/2024/06/23/07/51/ai-generated-8847623_1280.jpg',
+      'https://cdn.pixabay.com/photo/2024/04/26/09/32/car-8721503_1280.jpg'
+    ],
+    availableColors: [Color(0xFF808080), Color(0xFF000000), Color(0xFFFFFFFF)],
+    model3dUrl: 'assets/3d/car1.glb',
+    storeName: 'Honda Store',
+    storeLogo:
+        'https://cdn.pixabay.com/photo/2024/01/13/19/43/ai-generated-8506505_1280.jpg',
+    storeDescription: 'Official Honda Dealer',
+    brand: 'Honda',
+    condition: 'Used',
+  ),
+  const ProductDetail(
+    title: 'Ford Mustang',
+    description:
+        'Iconic muscle car with powerful engine and thrilling performance.',
+    price: 35000,
+    rating: 4.8,
+    reviewCount: 200,
+    galleryImages: [
+      'https://www.topgear.com/sites/default/files/cars-car/image/2024/12/54196859052_9249719e93_o.jpg',
+      'https://media.ed.edmunds-media.com/ford/mustang/2026/oem/2026_ford_mustang_coupe_dark-horse_fq_oem_1_1600.jpg',
+      'https://cdn.motor1.com/images/mgl/LRAQQ/s1/2019-ford-mustang-shelby-gt350.webp',
+      'https://imgd.aeplcdn.com/664x374/cw/ec/23766/Ford-Mustang-Exterior-126883.jpg?wm=0&q=80',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI1DB2qLBx5nsvfNfqk9Cf-gKergOXevlMxR8v9F0BQuXJ5lmifJoLEFIjFa7dNpXqP0U&usqp=CAU'
+    ],
+    availableColors: [Color(0xFFFF0000), Color(0xFFFFFF00), Color(0xFF0000FF)],
+    model3dUrl: 'assets/3d/sport.glb',
+    storeName: 'Ford Store',
+    storeLogo: '',
+    storeDescription: 'Official Ford Dealer',
+    brand: 'Ford',
+    condition: 'New',
+  ),
+  const ProductDetail(
+    title: 'Officially Licensed BMW M8 GTE',
+    description:
+        'Luxury sports sedan offering dynamic driving experience and premium interior.',
+    price: 40000,
+    rating: 4.7,
+    reviewCount: 150,
+    galleryImages: [
+      'https://m.media-amazon.com/images/I/61oqmbe5Q1L._UF1000,1000_QL80_.jpg',
+      'https://cdn.cdon.com/media-dynamic/images/product/cloud/store/RemoteControlToys/000/142/426/596/142426596-280699748-11450-xtra.jpg?cache=133443600389791214&imWidth=600',
+      'https://cdn.motor1.com/images/mgl/LRAQQ/s1/2019-ford-mustang-shelby-gt350.webp',
+      'https://imgd.aeplcdn.com/664x374/cw/ec/23766/Ford-Mustang-Exterior-126883.jpg?wm=0&q=80',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI1DB2qLBx5nsvfNfqk9Cf-gKergOXevlMxR8v9F0BQuXJ5lmifJoLEFIjFa7dNpXqP0U&usqp=CAU'
+    ],
+    availableColors: [Color(0xFFFFFFFF), Color(0xFF000000), Color(0xFF0000FF)],
+    model3dUrl: 'assets/3d/2018TE.glb',
+    storeName: 'BMW Store',
+    storeLogo: '',
+    storeDescription: 'Official BMW Dealer',
+    brand: 'BMW',
+    condition: 'New',
+  ),
+  const ProductDetail(
+    title: 'Mercedes-Benz Maybach 2022',
+    description:
+        'Elegant compact executive car with cutting-edge technology and comfort.',
+    price: 45000,
+    rating: 4.6,
+    reviewCount: 180,
+    galleryImages: [
+      'https://avatars.mds.yandex.net/get-autoru-vos/5396158/9c7dfb55c0d2a659988c364e1fb7304a/456x342',
+      'https://avatars.mds.yandex.net/get-autoru-vos/5396158/9c7dfb55c0d2a659988c364e1fb7304a/456x342',
+      'https://avatars.mds.yandex.net/get-autoru-vos/5396158/9c7dfb55c0d2a659988c364e1fb7304a/456x342',
+      'https://avatars.mds.yandex.net/get-autoru-vos/5396158/9c7dfb55c0d2a659988c364e1fb7304a/456x342',
+      'https://avatars.mds.yandex.net/get-autoru-vos/5396158/9c7dfb55c0d2a659988c364e1fb7304a/456x342',
+      'https://avatars.mds.yandex.net/get-autoru-vos/5396158/9c7dfb55c0d2a659988c364e1fb7304a/456x342',
+    ],
+    availableColors: [Color(0xFFC0C0C0), Color(0xFF000000), Color(0xFFFFFFFF)],
+    model3dUrl: 'assets/3d/mercedes-benz_maybach_2022.glb',
+    storeName: 'Mercedes Store',
+    storeLogo: '',
+    storeDescription: 'Official Mercedes Dealer',
+    brand: 'Mercedes',
+    condition: 'New',
+  ),
+  const ProductDetail(
+    title: 'Tesla Model 3',
+    description: 'Electric sedan with impressive range and autopilot features.',
+    price: 38000,
+    rating: 4.9,
+    reviewCount: 300,
+    galleryImages: [
+      'https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/eghq9ct3evxunl27bkhl.jpg',
+      'https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/eghq9ct3evxunl27bkhl.jpg',
+      'https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/eghq9ct3evxunl27bkhl.jpg',
+      'https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/eghq9ct3evxunl27bkhl.jpg',
+      'https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/eghq9ct3evxunl27bkhl.jpg',
+      'https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/eghq9ct3evxunl27bkhl.jpg',
+    ],
+    availableColors: [Color(0xFFFFFFFF), Color(0xFF000000), Color(0xFF0000FF)],
+    model3dUrl: 'assets/3d/tesla_m3_model.glb',
+    storeName: 'Tesla Store',
+    storeLogo: '',
+    storeDescription: 'Official Tesla Dealer',
+    brand: 'Tesla',
+    condition: 'Used',
+  ),
+  const ProductDetail(
+    title: 'Toyota Prius Hybrid',
+    description:
+        'Eco-friendly hybrid with plug-in capability and spacious cabin.',
+    price: 33000,
+    rating: 4.6,
+    reviewCount: 140,
+    galleryImages: [
+      'https://www.toyota.com.sg/showroom/new-models/-/media/4ec94a5afd6d4faab5973c826ef1770b.png',
+      'https://www.toyota.com.sg/showroom/new-models/-/media/4ec94a5afd6d4faab5973c826ef1770b.png',
+      'https://www.toyota.com.sg/showroom/new-models/-/media/4ec94a5afd6d4faab5973c826ef1770b.png',
+      'https://www.toyota.com.sg/showroom/new-models/-/media/4ec94a5afd6d4faab5973c826ef1770b.png',
+    ],
+    availableColors: [Color(0xFF00FF00), Color(0xFF0000FF), Color(0xFF808080)],
+    model3dUrl: 'assets/3d/toyota_prius_2020.glb',
+    storeName: 'Toyota Store',
+    storeLogo: '',
+    storeDescription: 'Official Toyota Dealer',
+    brand: 'Toyota',
+    condition: 'New',
+  ),
+  const ProductDetail(
+    title: 'Hyundai Elantra N',
+    description:
+        'Sporty compact sedan with turbocharged engine and agile handling.',
+    price: 34000,
+    rating: 4.7,
+    reviewCount: 160,
+    galleryImages: [
+      'https://carfax-img.vast.com/carfax/v2/-942963066272079952/1/344x258',
+      'https://carfax-img.vast.com/carfax/v2/-942963066272079952/1/344x258',
+      'https://carfax-img.vast.com/carfax/v2/-942963066272079952/1/344x258',
+      'https://carfax-img.vast.com/carfax/v2/-942963066272079952/1/344x258',
+      'https://carfax-img.vast.com/carfax/v2/-942963066272079952/1/344x258',
+      'https://carfax-img.vast.com/carfax/v2/-942963066272079952/1/344x258',
+    ],
+    availableColors: [Color(0xFFFF0000), Color(0xFF000000), Color(0xFFFFFFFF)],
+    model3dUrl: 'assets/3d/2024_hyundai_elantra_n.glb',
+    storeName: 'Hyundai Store',
+    storeLogo: '',
+    storeDescription: 'Official Hyundai Dealer',
+    brand: 'Hyundai',
+    condition: 'New',
+  ),
+  const ProductDetail(
+    title: '2001 Volkswagen W12 Nardo Coupe Concept',
+    description:
+        'All-wheel-drive hot hatch delivering exhilarating performance.',
+    price: 46000,
+    rating: 4.8,
+    reviewCount: 190,
+    galleryImages: [
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSG4xQh5d7J4MeXa8JgPJhNpepwGj09k1TQ&s',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSG4xQh5d7J4MeXa8JgPJhNpepwGj09k1TQ&s',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSG4xQh5d7J4MeXa8JgPJhNpepwGj09k1TQ&s',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiSG4xQh5d7J4MeXa8JgPJhNpepwGj09k1TQ&s',
+    ],
+    availableColors: [
+      Colors.yellow,
+      Color(0xFFFF0000),
+      Color.fromARGB(255, 0, 0, 0)
+    ],
+    model3dUrl: 'assets/3d/2001VolkswagenW12Nardo.glb',
+    storeName: 'Volkswagen Store',
+    storeLogo: '',
+    storeDescription: 'Official Volkswagen Dealer',
+    brand: 'Volkswagen',
+    condition: 'New',
+  ),
+];
