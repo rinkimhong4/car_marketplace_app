@@ -100,7 +100,7 @@ class _ProductCardState extends State<ProductCard> {
                     children: [
                       // Title
                       Text(
-                        widget.product.title.split(' ').take(3).join(' '),
+                        widget.product.title.split('.').take(3).join(' '),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(

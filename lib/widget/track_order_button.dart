@@ -1,34 +1,34 @@
 import 'package:flutter/material.dart';
 
-class PrimaryButtonApp extends StatelessWidget {
-  final String text;
+class TrackOrderButton extends StatelessWidget {
+  final String label;
   final VoidCallback onPressed;
-  final Color backgroundColor;
+  final double width;
+  final double height;
 
-  const PrimaryButtonApp({
+  const TrackOrderButton({
     super.key,
-    required this.text,
+    this.label = 'Track Order',
     required this.onPressed,
-    this.backgroundColor = Colors.blue,
+    this.width = 140,
+    this.height = 40,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 56,
+      width: width,
+      height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
+          backgroundColor: Colors.black,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
-          elevation: 6,
-          shadowColor: Colors.black.withValues(alpha: 0.8),
         ),
         onPressed: onPressed,
         child: Text(
-          text,
+          label,
           style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,

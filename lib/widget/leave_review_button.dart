@@ -1,35 +1,33 @@
 import 'package:flutter/material.dart';
 
-class PrimaryButtonApp extends StatelessWidget {
-  final String text;
+class LeaveReviewButton extends StatelessWidget {
   final VoidCallback onPressed;
-  final Color backgroundColor;
+  final double width;
+  final double height;
 
-  const PrimaryButtonApp({
+  const LeaveReviewButton({
     super.key,
-    required this.text,
     required this.onPressed,
-    this.backgroundColor = Colors.blue,
+    this.width = 160,
+    this.height = 40,
   });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
-      height: 56,
+      width: width,
+      height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          backgroundColor: backgroundColor,
+          backgroundColor: Colors.black,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
           ),
-          elevation: 6,
-          shadowColor: Colors.black.withValues(alpha: 0.8),
         ),
         onPressed: onPressed,
-        child: Text(
-          text,
-          style: const TextStyle(
+        child: const Text(
+          'Leave Review',
+          style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
             color: Colors.white,
