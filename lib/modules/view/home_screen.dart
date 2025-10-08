@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:car_marketplace_app/config/routes/app_routes.dart';
 import 'package:car_marketplace_app/config/theme/theme_style.dart';
 import 'package:car_marketplace_app/core/data/product_data.dart';
 import 'package:car_marketplace_app/modules/view/filter_screen.dart';
@@ -126,7 +127,7 @@ class _HomeScreenState extends State<HomeScreen> {
       actions: [
         IconButton(
           onPressed: () {
-            //
+            RouteView.wishList.go();
           },
           icon: Image.asset(
             'assets/icons/heart.png',
@@ -137,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         IconButton(
           onPressed: () {
-            //
+            RouteView.notification.go();
           },
           icon: Image.asset(
             'assets/icons/notification-bing.png',

@@ -14,7 +14,13 @@ enum RouteView {
   otp,
   forgotpassword,
   createnewpassword,
-  carDetail
+  carDetail,
+  //
+  reivews,
+  notification,
+  specialOffers,
+  wishList,
+  topDeals
 }
 
 extension AppPages on RouteView {

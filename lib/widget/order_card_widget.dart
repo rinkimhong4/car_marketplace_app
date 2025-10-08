@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:car_marketplace_app/config/theme/theme_style.dart';
 import 'package:car_marketplace_app/modules/view/track_order_screen.dart';

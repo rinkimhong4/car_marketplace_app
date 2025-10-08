@@ -1,5 +1,10 @@
 import 'package:car_marketplace_app/config/routes/app_routes.dart';
 import 'package:car_marketplace_app/core/models/product_detail_model.dart';
+import 'package:car_marketplace_app/modules/items/notification_screen.dart';
+import 'package:car_marketplace_app/modules/items/rating_and_reviews.dart';
+import 'package:car_marketplace_app/modules/items/special_offers_screen.dart';
+import 'package:car_marketplace_app/modules/items/top_deals_screen.dart';
+import 'package:car_marketplace_app/modules/items/wish_list_screen.dart';
 import 'package:car_marketplace_app/modules/view/auth/signin/sing_in_screen.dart';
 import 'package:car_marketplace_app/modules/view/auth/signup/sign_up_screen.dart';
 import 'package:car_marketplace_app/modules/view/car_detail_screen.dart';
@@ -72,6 +77,36 @@ class AppRouting {
         return GetPage(
           name: "/${e.name}",
           page: () => CarDetailScreen(product: Get.arguments as ProductDetail),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.reivews:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => const RatingAndReviews(),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.notification:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => const NotificationScreen(),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.specialOffers:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => const SpecialOffersScreen(),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.wishList:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => const WishListScreen(),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.topDeals:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => const TopDealsScreen(),
           // binding: NotificationBinding(),
         );
     }

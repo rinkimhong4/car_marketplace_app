@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:car_marketplace_app/config/routes/app_routes.dart';
 import 'package:car_marketplace_app/config/theme/theme_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_3d_controller/flutter_3d_controller.dart';
@@ -226,11 +227,19 @@ class _CarDetailScreenState extends State<CarDetailScreen> {
                           ),
                         ),
                         IconButton(
-                          icon: const Icon(Icons.chat_bubble_outline),
-                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.chat_bubble_outline,
+                            color: Colors.black,
+                          ),
+                          onPressed: () {
+                            RouteView.reivews.go();
+                          },
                         ),
                         IconButton(
-                          icon: const Icon(Icons.call),
+                          icon: const Icon(
+                            Icons.call,
+                            color: Colors.black,
+                          ),
                           onPressed: () {},
                         ),
                       ],

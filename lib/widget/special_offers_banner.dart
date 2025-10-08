@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:car_marketplace_app/config/routes/app_routes.dart';
 import 'package:car_marketplace_app/config/theme/theme_style.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
@@ -107,7 +108,9 @@ class _SpecialOffersBannerState extends State<SpecialOffersBanner> {
                 style: AppTextStyle.medium18(color: Colors.black),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  RouteView.specialOffers.go();
+                },
                 child: Text(
                   'See All',
                   style: AppTextStyle.regular14(
@@ -305,7 +308,9 @@ class _SpecialOffersBannerState extends State<SpecialOffersBanner> {
                 style: AppTextStyle.medium18(color: Colors.black),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  RouteView.topDeals.go();
+                },
                 child: Text(
                   'See All',
                   style: AppTextStyle.regular14(
