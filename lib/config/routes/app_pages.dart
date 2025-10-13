@@ -8,6 +8,7 @@ import 'package:car_marketplace_app/modules/items/wish_list_screen.dart';
 import 'package:car_marketplace_app/modules/view/auth/signin/sing_in_screen.dart';
 import 'package:car_marketplace_app/modules/view/auth/signup/sign_up_screen.dart';
 import 'package:car_marketplace_app/modules/view/car_detail_screen.dart';
+import 'package:car_marketplace_app/modules/view/chat_view_screen.dart';
 import 'package:car_marketplace_app/modules/view/forgotpassword/forgot_password_screen.dart';
 import 'package:car_marketplace_app/widget/main_navigation_screen.dart';
 import 'package:car_marketplace_app/modules/view/splash/on_boarding_screen.dart';
@@ -107,6 +108,15 @@ class AppRouting {
         return GetPage(
           name: "/${e.name}",
           page: () => const TopDealsScreen(),
+          // binding: NotificationBinding(),
+        );
+      case RouteView.chatView:
+        return GetPage(
+          name: "/${e.name}",
+          page: () => ChatViewScreen(
+            name: (Get.arguments as Map)['name'],
+            profileImage: (Get.arguments as Map)['profileImage'],
+          ),
           // binding: NotificationBinding(),
         );
     }

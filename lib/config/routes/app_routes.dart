@@ -20,7 +20,8 @@ enum RouteView {
   notification,
   specialOffers,
   wishList,
-  topDeals
+  topDeals,
+  chatView,
 }
 
 extension AppPages on RouteView {

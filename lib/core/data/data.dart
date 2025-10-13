@@ -1,60 +1,62 @@
 class Datas {
-  static var data = {
-    'data': {
-      'popular': [
-        {
-          'name': 'Sithy',
-          'image':
-              'https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D',
-          'description': 'ini adalah deskripsi A',
-        },
-        {
-          'name': 'Bunna',
-          'image':
-              'https://media.istockphoto.com/id/1168977609/photo/paparazzi-photographer-in-petropolis-rio-de-janeiro.jpg?s=612x612&w=0&k=20&c=R0XWB0-J0s-kbWfW6RgYGvNGMxnMSProeb8_KH-D2AA=',
-          'description': 'ini adalah deskripsi B',
-        },
-        {
-          'name': 'Boss',
-          'image':
-              'https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D',
-          'description': 'ini adalah deskripsi C',
-        },
-        {
-          'name': 'Ben',
-          'image':
-              'https://media.istockphoto.com/id/855413438/photo/take-every-chance-you-get-in-life.jpg?b=1&s=612x612&w=0&k=20&c=27pIidhiQYYaQCGI1fDfguo8MizvO7Gi2HwgJiY5Jz4=',
-          'description': 'ini adalah deskripsi D',
-        },
-      ],
-      'latest': [
-        {
-          'name': 'Sithy',
-          'image':
-              'https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D',
-          'description': 'ini adalah deskripsi A',
-        },
-        {
-          'name': 'Bunna',
-          'image':
-              'https://media.istockphoto.com/id/1168977609/photo/paparazzi-photographer-in-petropolis-rio-de-janeiro.jpg?s=612x612&w=0&k=20&c=R0XWB0-J0s-kbWfW6RgYGvNGMxnMSProeb8_KH-D2AA=',
-          'description': 'ini adalah deskripsi B',
-        },
-        {
-          'name': 'Boss',
-          'image':
-              'https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D',
-          'description': 'ini adalah deskripsi C',
-        },
-        {
-          'name': 'Ben',
-          'image':
-              'https://media.istockphoto.com/id/855413438/photo/take-every-chance-you-get-in-life.jpg?b=1&s=612x612&w=0&k=20&c=27pIidhiQYYaQCGI1fDfguo8MizvO7Gi2HwgJiY5Jz4=',
-          'description': 'ini adalah deskripsi D',
-        },
-      ],
-    },
-  };
+  static var inboxList = [
+    {
+      'data': {
+        'chats': [
+          {
+            'name': 'John Doe',
+            'message': 'Hey! How are you doing?',
+            'time': '10:30 AM',
+            'unreadCount': 2,
+            'profileImage': 'assets/images/car.png',
+            'isOnline': true,
+          },
+          {
+            'name': 'Sarah Kim',
+            'message': 'Can we talk later?',
+            'time': 'Yesterday',
+            'unreadCount': 0,
+            'profileImage': 'assets/images/car.png',
+            'isOnline': false,
+          },
+          {
+            'name': 'David Chen',
+            'message': 'Meeting postponed to tomorrow.',
+            'time': '08:15 AM',
+            'unreadCount': 1,
+            'profileImage': 'assets/images/car.png',
+            'isOnline': true,
+          },
+        ],
+        'calls': [
+          {
+            'name': 'Michael Lee',
+            'callType': 'Voice Call',
+            'duration': '2 min',
+            'time': '09:10 AM',
+            'status': 'missed',
+            'profileImage': 'assets/images/car.png',
+          },
+          {
+            'name': 'Anna Smith',
+            'callType': 'Video Call',
+            'duration': '15 min',
+            'time': '08:45 AM',
+            'status': 'outgoing',
+            'profileImage': 'assets/images/car.png',
+          },
+          {
+            'name': 'Lisa Tran',
+            'callType': 'Voice Call',
+            'duration': '5 min',
+            'time': 'Yesterday',
+            'status': 'incoming',
+            'profileImage': 'assets/images/car.png',
+          },
+        ],
+      }
+    }
+  ];
 
   static var notificationData = {
     'data': {
