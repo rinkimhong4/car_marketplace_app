@@ -40,6 +40,8 @@ dependencies:
   intl_phone_number_input: ^0.7.5
   panara_dialogs: ^0.1.5
   rating_dialog: ^2.0.4
+  flutter_credit_card: ^4.1.0
+  barcode: ^2.2.9
 
 dev_dependencies:
   flutter_test:
